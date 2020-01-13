@@ -1,0 +1,24 @@
+{
+    "name": "frc/packagist",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Joonas Meriläinen",
+            "email": "merilainenjoonas@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "symfony/finder": "^4.3.5||^5.0.0",
+        "composer/satis": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Frc\\Satis\\": "src"
+        }
+    },
+    "scripts": {
+        "json": "@php src/run.php",
+        "build": "vendor/bin/satis build .satis.json dist"
+    }
+}
