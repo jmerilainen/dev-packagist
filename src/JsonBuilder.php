@@ -111,7 +111,7 @@ class JsonBuilder
     {
         return [
             "name" => $this->name,
-            "homepage" => ltrim($this->homepage, '/'),
+            "homepage" => trim($this->homepage, '/'),
             "repositories" => $pacakges,
             "archive" => [
                 "directory" => $this->folder,
