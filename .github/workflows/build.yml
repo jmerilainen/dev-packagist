@@ -23,6 +23,8 @@ jobs:
       run: composer run-script json &&  composer run-script build
 
   deploy:
+    needs: build
+
     runs-on: ubuntu-latest
 
     steps:
