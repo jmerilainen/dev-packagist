@@ -1,5 +1,6 @@
 {
-    "name": "frc/packagist",
+    "name": "jmerilainen/packagist",
+    "description": "Packagist",
     "type": "project",
     "authors": [
         {
@@ -7,6 +8,7 @@
             "email": "merilainenjoonas@gmail.com"
         }
     ],
+    "license": "MIT",
     "require": {},
     "require-dev": {
         "symfony/finder": "^4.3.5||^5.0.0",
