@@ -8,8 +8,8 @@ class Console
     {
         (new JsonBuilder(realpath(__DIR__ . '/..')))
             ->from('packages')
-            ->name('frc/packagist')
-            ->homepage('http://packagist.frc.io/')
+            ->name('jmerilainen/packagist')
+            ->homepage('https://packagist.jmerilainen.fi/')
             ->save('.satis.json');
     }
 }
