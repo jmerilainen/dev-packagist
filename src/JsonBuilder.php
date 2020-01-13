@@ -38,7 +38,7 @@ class JsonBuilder
         $files = array_map(function($path) {
             $basename = basename($path);
             return [
-                'url' => str_replace($this->root, '', $path),
+                'url' => $path,
                 'version' => $this->parseVersionFromFile($basename),
                 'name' => $this->parsePackageNameFromFile($basename),
                 'vendor' => basename(dirname($path)),
