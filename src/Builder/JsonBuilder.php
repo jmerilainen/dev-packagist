@@ -1,6 +1,6 @@
 <?php
 
-namespace Frc\Satis;
+namespace Frc\Satis\Builder;
 
 use Symfony\Component\Finder\Finder;
 
@@ -15,6 +15,8 @@ class JsonBuilder
     protected $input;
 
     protected $folder;
+
+    protected $external;
 
     protected $satis = [];
 
@@ -49,12 +51,10 @@ class JsonBuilder
             return $this->generatePackageJson($args);
         }, $files);
 
-        $external = file_get_contents("{$input}/external.json");
-        $json = json_decode($external, true)['repositories'];
+        $external = $this->getExternalRepos();
+        $satis = array_merge($external, $files);
 
-        $satis = array_merge($json, $files);
-
-        $this->satis = $this->generateSatisJson($files);
+        $this->satis = $this->generateSatisJson($satis);
     }
 
     public function name($input)
@@ -69,6 +69,12 @@ class JsonBuilder
         return $this;
     }
 
+    public function external($input)
+    {
+        $this->external = $input;
+        return $this;
+    }
+
     public function save($name)
     {
         $path = "{$this->root}/{$name}";
@@ -78,6 +84,15 @@ class JsonBuilder
             json_encode($this->satis, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
         );
         fclose($file);
+    }
+
+    protected function getExternalRepos()
+    {
+        $file = "{$this->root}/{$this->external}";
+                $external = file_get_contents($file);
+                $repos = json_decode($external, true)['repositories'];
+
+        return $repos;
     }
 
     protected function parseVersionFromFile($file)
@@ -111,7 +126,7 @@ class JsonBuilder
     {
         return [
             "name" => $this->name,
-            "homepage" => rtrim($this->homepage, '/'),
+            "homepage" => ltrim($this->homepage, '/'),
             "repositories" => $pacakges,
             "archive" => [
                 "directory" => $this->folder,

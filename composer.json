@@ -1,6 +1,6 @@
 {
-    "name": "jmerilainen/packagist",
-    "description": "Packagist",
+    "name": "frc/packagist",
+    "description": "Satis repository builder",
     "type": "project",
     "authors": [
         {
@@ -8,10 +8,10 @@
             "email": "merilainenjoonas@gmail.com"
         }
     ],
-    "license": "MIT",
     "require": {},
     "require-dev": {
-        "symfony/finder": "^4.3.5||^5.0.0",
+        "symfony/finder": "^4.3.5 || ^5.0.0",
+        "symfony/console": "^4.3.5 || ^5.0.0",
         "composer/satis": "dev-master"
     },
     "autoload": {
@@ -20,7 +20,7 @@
         }
     },
     "scripts": {
-        "json": "@php src/run.php",
+        "generate": "bin/satis-builder build --from=packages --external=packages/external.json --name=$SATIS_NAME --homepage=$SATIS_HOMEPAGE --output=.satis.json",
         "build": "vendor/bin/satis build .satis.json dist"
     }
 }
