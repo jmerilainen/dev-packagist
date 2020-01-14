@@ -1,4 +1,4 @@
-Demo: https://jmerilainen-packagist-storage.s3.eu-north-1.amazonaws.com/index.html
+Demo: https://packagist.jmerilainen.fi/
 
 ## Composer scripts
 ```json
