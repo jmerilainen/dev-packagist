@@ -149,25 +149,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/satis.git",
-                "reference": "217297cce6898a4cefd6f978ad971fdacce92d17"
+                "reference": "b2f76df027ef24e33f9bb799242eea0ca2a8c0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/satis/zipball/217297cce6898a4cefd6f978ad971fdacce92d17",
-                "reference": "217297cce6898a4cefd6f978ad971fdacce92d17",
+                "url": "https://api.github.com/repos/composer/satis/zipball/b2f76df027ef24e33f9bb799242eea0ca2a8c0a8",
+                "reference": "b2f76df027ef24e33f9bb799242eea0ca2a8c0a8",
                 "shasum": ""
             },
             "require": {
-                "composer/composer": "^1.9.0",
-                "php": "^7.2",
-                "symfony/console": "^4.3.5||^5.0.0",
-                "twig/twig": "^2.12.0||^3.0.0"
+                "composer/composer": "^1.9",
+                "php": "^7.2||^8.0",
+                "symfony/console": "^4.4||^5.0",
+                "twig/twig": "^2.12||^3.0"
             },
             "require-dev": {
                 "ext-json": "*",
-                "friendsofphp/php-cs-fixer": "^2.15.3",
+                "friendsofphp/php-cs-fixer": "^2.15",
                 "mikey179/vfsstream": "^1.6.7",
-                "phpunit/phpunit": "^7.0 || ^8.0"
+                "phpunit/phpunit": "^8.2||^9.0"
             },
             "bin": [
                 "bin/satis"
@@ -213,7 +213,7 @@
                 "repository",
                 "static"
             ],
-            "time": "2020-01-08T07:22:03+00:00"
+            "time": "2020-02-18T10:21:30+00:00"
         },
         {
             "name": "composer/semver",
@@ -763,16 +763,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.4",
+            "version": "v4.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "3a50be43515590faf812fbd7708200aabc327ec3"
+                "reference": "ea69c129aed9fdeca781d4b77eb20b62cf5d5357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/3a50be43515590faf812fbd7708200aabc327ec3",
-                "reference": "3a50be43515590faf812fbd7708200aabc327ec3",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/ea69c129aed9fdeca781d4b77eb20b62cf5d5357",
+                "reference": "ea69c129aed9fdeca781d4b77eb20b62cf5d5357",
                 "shasum": ""
             },
             "require": {
@@ -808,7 +808,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-04T13:00:46+00:00"
+            "time": "2020-02-14T07:42:58+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
